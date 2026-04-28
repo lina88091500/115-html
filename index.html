@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>11501 BASIC 練習集</title>
+    <style>
+        :root {
+            --bg-start: #202040;
+            --bg-end: #2f518f;
+            --card: rgba(255, 255, 255, 0.92);
+            --card-strong: #ffffff;
+            --accent: #ff6b6b;
+            --accent-soft: #ffb86c;
+            --text-main: #1b1b2f;
+            --text-muted: #4f5d75;
+            --shadow: 0 18px 50px rgba(15, 23, 73, 0.24);
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            min-height: 100vh;
+            font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(135deg, var(--bg-start), var(--bg-end));
+            color: var(--card-strong);
+            line-height: 1.6;
+        }
+
+        .page {
+            padding: 48px 24px 32px;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .hero {
+            text-align: center;
+            padding: 40px 20px 60px;
+        }
+
+        .hero h1 {
+            font-size: clamp(2.8rem, 4vw, 4.4rem);
+            letter-spacing: 0.08em;
+            margin-bottom: 18px;
+            color: #ff6b6b;
+        }
+
+        .hero p {
+            max-width: 760px;
+            margin: 0 auto;
+            font-size: 1.05rem;
+            color: rgba(255, 255, 255, 0.84);
+        }
+
+        .hero .badge {
+            display: inline-flex;
+            margin-top: 20px;
+            padding: 10px 18px;
+            border-radius: 999px;
+            background: rgba(255, 255, 255, 0.12);
+            border: 1px solid rgba(255, 255, 255, 0.18);
+            color: #ffecb3;
+            font-weight: 600;
+            letter-spacing: 0.08em;
+        }
+
+        .grid {
+            display: grid;
+            gap: 24px;
+            grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+        }
+
+        .card {
+            position: relative;
+            overflow: hidden;
+            border-radius: 28px;
+            background: var(--card);
+            color: var(--text-main);
+            padding: 28px 26px;
+            box-shadow: var(--shadow);
+            transition: transform 0.25s ease, box-shadow 0.25s ease;
+        }
+
+        .card:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 26px 64px rgba(15, 23, 73, 0.3);
+        }
+
+        .card::before {
+            content: "";
+            position: absolute;
+            inset: 0;
+            background: radial-gradient(circle at top right, rgba(255, 107, 107, 0.18), transparent 42%);
+            pointer-events: none;
+        }
+
+        .card h2 {
+            margin-bottom: 16px;
+            font-size: 1.4rem;
+        }
+
+        .card p {
+            color: var(--text-muted);
+            margin-bottom: 24px;
+        }
+
+        .card a {
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+            padding: 12px 18px;
+            border-radius: 999px;
+            text-decoration: none;
+            color: var(--card-strong);
+            background: linear-gradient(135deg, var(--accent), var(--accent-soft));
+            font-weight: 700;
+            transition: filter 0.2s ease;
+        }
+
+        .card a:hover {
+            filter: brightness(1.06);
+        }
+
+        .section-title {
+            margin: 52px 0 22px;
+            color: #f7f7ff;
+            font-size: 1.15rem;
+            letter-spacing: 0.12em;
+            text-transform: uppercase;
+        }
+
+        .footer {
+            margin-top: 50px;
+            text-align: center;
+            color: rgba(255, 255, 255, 0.64);
+            font-size: 0.95rem;
+        }
+
+        @media (max-width: 640px) {
+            .page {
+                padding: 28px 16px 24px;
+            }
+
+            .hero {
+                padding-bottom: 40px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <main class="page">
+        <section class="hero">
+            <span class="badge">11501 FULL BASIC</span>
+            <h1>PHP 練習範例總覽</h1>
+            <p>這裡收錄你的 PHP 練習頁面，包含基礎語法、選單操作、迴圈練習與實作題。點選每一個卡片快速前往對應範例，享受色彩鮮明又直覺的學習頁面。</p>
+        </section>
+
+        <div h2 class="section-title">練習列表</div>
+        <div class="grid">
+            <article class="card">
+                <h2>01 - 字串取代</h2>
+                <p>範例：基本 PHP 語法、輸出與變數練習。</p>
+                <a href="1150428/01-string.php">前往查看</a>
+            </article>
+
+            <article class="card">
+                <h2>02 - 字串分割</h2>
+                <p>範例：表單與下拉選單處理。</p><br>
+            
+                <a href="1150420/02-select.php">前往查看</a>
+            </article>
+
+            <article class="card">
+                <h2>03 - 字串組合</h2>
+                <p>範例：使用 for 迴圈輸出數列與重複內容。</p>
+                <a href="1150421/03-forloop.php">前往查看</a>
+            </article>
+
+            
+        </div>
+
+        <footer class="footer">
+            祝你學習順利！若需要更多版面配置調整，隨時告訴我。
+        </footer>
+    </main>
+</body>
+</html>
