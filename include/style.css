@@ -1,0 +1,360 @@
+/* ===== 全局樣式 ===== */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Microsoft JhengHei', Arial, sans-serif;
+    line-height: 1.6;
+    color: #333;
+}
+
+/* ===== Header 和導航 ===== */
+header {
+    background-color: #014e48;
+    color: white;
+    padding: 0;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+.header-top {
+    display: flex;
+    align-items: center;
+    padding: 20px 50px;
+}
+
+nav {
+    background-color: #0f1e2f;
+    display: flex;
+    justify-content: flex-start;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    padding: 15px 25px;
+    display: inline-block;
+    transition: background-color 0.3s ease;
+    font-weight: 500;
+}
+
+nav a:hover {
+    background-color: #00bfff;
+    color: #1e3a5f;
+}
+
+nav a.active {
+    background-color: #00bfff;
+    color: #1e3a5f;
+}
+
+.logo {
+    width: 60px;
+    height: 60px;
+    background-color: #00bfff;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-right: 20px;
+    font-weight: bold;
+    font-size: 24px;
+    color: white;
+}
+
+.company-name {
+    font-size: 28px;
+    font-weight: bold;
+}
+
+/* ===== 主要內容區 ===== */
+main {
+    max-width: 1200px;
+    margin: 40px auto;
+    padding: 0 20px;
+}
+
+.page-title {
+    font-size: 32px;
+    font-weight: bold;
+    margin-bottom: 10px;
+    color: #1e3a5f;
+}
+
+.page-subtitle {
+    color: #666;
+    margin-bottom: 40px;
+}
+
+.section-title {
+    font-size: 24px;
+    font-weight: bold;
+    margin: 40px 0 20px 0;
+    padding-bottom: 10px;
+    border-bottom: 3px solid #667eea;
+}
+
+/* ===== Footer ===== */
+footer {
+    background-color: #1e3a5f;
+    color: white;
+    text-align: center;
+    padding: 30px 20px;
+    margin-top: 60px;
+}
+
+.footer-content {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.copyright {
+    margin-bottom: 10px;
+}
+
+.contact-phone {
+    font-weight: bold;
+}
+
+/* ===== 首頁特定樣式 (index.php) ===== */
+.slide-container {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    color: white;
+    padding: 60px 40px;
+    border-radius: 10px;
+    margin-bottom: 40px;
+    text-align: center;
+}
+
+.slide-title {
+    font-size: 32px;
+    margin-bottom: 15px;
+}
+
+.slide-description {
+    font-size: 16px;
+    margin-bottom: 20px;
+}
+
+.slide-btn {
+    background-color: #00bfff;
+    color: white;
+    padding: 12px 30px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+.slide-btn:hover {
+    background-color: #00a8d4;
+}
+
+.news-section {
+    margin-bottom: 40px;
+}
+
+.news-item {
+    background-color: #f9f9f9;
+    padding: 15px;
+    margin-bottom: 15px;
+    border-left: 4px solid #667eea;
+    border-radius: 4px;
+}
+
+.news-date {
+    color: #999;
+    font-size: 12px;
+    margin-bottom: 5px;
+}
+
+.news-title {
+    font-weight: bold;
+    margin-bottom: 8px;
+    color: #333;
+}
+
+.news-content {
+    color: #666;
+    font-size: 14px;
+}
+
+/* ===== 產品頁面特定樣式 (product.php) ===== */
+.product-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px;
+    margin-bottom: 40px;
+}
+
+.product-card {
+    background-color: #f9f9f9;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 20px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+    transition: transform 0.3s ease;
+}
+
+.product-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+}
+
+.product-icon {
+    font-size: 32px;
+    margin-bottom: 10px;
+}
+
+.product-name {
+    font-size: 18px;
+    font-weight: bold;
+    margin-bottom: 10px;
+    color: #1e3a5f;
+}
+
+.product-description {
+    color: #666;
+    font-size: 14px;
+    margin-bottom: 15px;
+}
+
+.pricing-table {
+    width: 100%;
+    border-collapse: collapse;
+    background-color: white;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+    margin-bottom: 40px;
+}
+
+.pricing-table th {
+    background-color: #667eea;
+    color: white;
+    padding: 15px;
+    text-align: left;
+    font-weight: bold;
+}
+
+.pricing-table td {
+    padding: 15px;
+    border-bottom: 1px solid #ddd;
+}
+
+.pricing-table tr:nth-child(even) {
+    background-color: #f9f9f9;
+}
+
+.price {
+    color: #00bfff;
+    font-weight: bold;
+    font-size: 18px;
+}
+
+/* ===== 聯絡我們頁面特定樣式 (aboutus.php) ===== */
+.about-section {
+    background-color: #f9f9f9;
+    padding: 30px;
+    border-radius: 8px;
+    margin-bottom: 40px;
+    border-left: 4px solid #667eea;
+}
+
+.about-content {
+    color: #666;
+    line-height: 1.8;
+    margin-bottom: 15px;
+}
+
+.highlight {
+    color: #667eea;
+    font-weight: bold;
+}
+
+.info-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+    margin-bottom: 40px;
+}
+
+.info-box {
+    background-color: #f9f9f9;
+    padding: 20px;
+    border-radius: 8px;
+    border-top: 4px solid #667eea;
+}
+
+.info-icon {
+    font-size: 28px;
+    margin-bottom: 10px;
+}
+
+.info-title {
+    font-weight: bold;
+    margin-bottom: 10px;
+    color: #1e3a5f;
+}
+
+.info-text {
+    color: #666;
+    font-size: 14px;
+}
+
+.staff-container {
+    margin-bottom: 40px;
+}
+
+.region-section {
+    margin-bottom: 30px;
+    background-color: #f9f9f9;
+    padding: 20px;
+    border-radius: 8px;
+}
+
+.region-title {
+    font-size: 18px;
+    font-weight: bold;
+    margin-bottom: 15px;
+    color: #1e3a5f;
+}
+
+.staff-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 15px;
+}
+
+.staff-card {
+    background-color: white;
+    padding: 15px;
+    border-radius: 6px;
+    border-left: 3px solid #00bfff;
+}
+
+.staff-name {
+    font-weight: bold;
+    color: #1e3a5f;
+    margin-bottom: 5px;
+}
+
+.staff-position {
+    color: #667eea;
+    font-size: 12px;
+    margin-bottom: 8px;
+}
+
+.staff-phone {
+    color: #666;
+    font-size: 13px;
+    margin-bottom: 5px;
+}
+
+.staff-email {
+    color: #00bfff;
+    font-size: 13px;
+    word-break: break-all;
+}
